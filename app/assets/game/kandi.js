@@ -388,7 +388,7 @@ var player = (function(player) {
   player.isJumping = false;
 
   // spritesheets
-  player.sheet     = new SpriteSheet('imgs/normal_walk.png', player.width, player.height);
+  player.sheet     = new SpriteSheet('/assets/imgs/normal_walk.png', player.width, player.height);
   player.walkAnim  = new Animation(player.sheet, 4, 0, 15);
   player.jumpAnim  = new Animation(player.sheet, 4, 15, 15);
   player.fallAnim  = new Animation(player.sheet, 4, 11, 11);
