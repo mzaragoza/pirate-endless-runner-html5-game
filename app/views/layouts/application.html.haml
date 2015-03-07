@@ -1,0 +1,46 @@
+!!!
+%html
+  %head
+    %meta{:charset => "UTF-8"}/
+    %title Pirate Panda
+    %link{:href => "/assets/kandi.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+    %script{:src => "/assets/jquery.2.1.1.min.js", :type => "text/javascript"}
+  %body
+    .wrapper
+      .sound.sound-off
+      #menu
+        #progress
+          #percent
+            Downloading:
+            %span#p
+          %progress#progress-bar{:value => "0"}
+        #main
+          %h1 Pirate Panda
+          %ul
+            %li
+              %a.button.play{:href => "javascript:void(0)"} Start Game
+            %li
+              %a.button.credits{:href => "javascript:void(0)"} Credits
+        #credits
+          %ul
+            %li.artwork
+              Art:
+              %a{:href => "https://github.com/xerogenesis"} Marshall Capozziello
+          %ul
+            %li.developer
+              Developer:
+              %a{:href => "https://github.com/mzaragoza"} Moises Zaragoza
+          %a.button.back{:href => "javascript:void(0)"} Back
+      %canvas#canvas{:height => "480", :width => "800"}
+        %p You're browser does not support the required functionality to play this game.
+        %p
+          Please update to a modern browser such as
+          %a{:href => "www.google.com/chrome/‎"} Google Chrome
+          to play.
+      #game-over
+        %h2
+          You ran
+          %span#score
+          meters!
+        %a.button.restart{:href => "javascript:void(0)"} Try again?
+    %script{:src => "/assets/kandi.js", :type => "text/javascript"}
