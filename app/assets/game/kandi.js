@@ -402,21 +402,22 @@ var player = (function(player) {
    * Update the player's position and animation
    */
   player.update = function() {
-
-    $("canvas").on("tap",function(){
+    function mz_jump(){
       player.isJumping = true;
       player.dy = player.jumpDy;
-      jumpCounter = 12;
+      jumpCounter = 20;
       assetLoader.sounds.jump.play();
+    }
+
+    $("canvas").on("tap",function(){
+      mz_jump();
     });
 
     // jump if not currently jumping or falling
     if (KEY_STATUS.space && player.dy === 0 && !player.isJumping) {
-      player.isJumping = true;
-      player.dy = player.jumpDy;
-      jumpCounter = 12;
-      assetLoader.sounds.jump.play();
+      mz_jump();
     }
+
 
     // jump higher if the space bar is continually pressed
     if (KEY_STATUS.space && jumpCounter) {
