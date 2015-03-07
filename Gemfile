@@ -44,4 +44,7 @@ group :development, :test do
   gem 'spring'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
 gem 'sdoc', '~> 0.4.0', group: :doc
