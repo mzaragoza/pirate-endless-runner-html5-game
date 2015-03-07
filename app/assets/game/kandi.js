@@ -383,7 +383,7 @@ var player = (function(player) {
   // jumping
   player.gravity   = 1;
   player.dy        = 0;
-  player.jumpDy    = -10;
+  player.jumpDy    = -15;
   player.isFalling = false;
   player.isJumping = false;
 
@@ -410,7 +410,12 @@ var player = (function(player) {
     }
 
     $("canvas").on("tap",function(){
-      mz_jump();
+      if (player.dy === 0 && !player.isJumping) {
+        mz_jump();
+      }
+      if (jumpCounter) {
+        player.dy = player.jumpDy;
+      }
     });
 
     // jump if not currently jumping or falling
