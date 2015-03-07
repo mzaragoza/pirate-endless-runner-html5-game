@@ -403,6 +403,13 @@ var player = (function(player) {
    */
   player.update = function() {
 
+    $("canvas").on("tap",function(){
+      player.isJumping = true;
+      player.dy = player.jumpDy;
+      jumpCounter = 12;
+      assetLoader.sounds.jump.play();
+    });
+
     // jump if not currently jumping or falling
     if (KEY_STATUS.space && player.dy === 0 && !player.isJumping) {
       player.isJumping = true;
