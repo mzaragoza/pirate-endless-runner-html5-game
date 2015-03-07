@@ -389,9 +389,9 @@ var player = (function(player) {
 
   // spritesheets
   player.sheet     = new SpriteSheet('/assets/imgs/normal_walk.png', player.width, player.height);
-  player.walkAnim  = new Animation(player.sheet, 4, 0, 15);
-  player.jumpAnim  = new Animation(player.sheet, 4, 15, 15);
-  player.fallAnim  = new Animation(player.sheet, 4, 11, 11);
+  player.walkAnim  = new Animation(player.sheet, 4, 0, 11);
+  player.jumpAnim  = new Animation(player.sheet, 4, 6, 6);
+  player.fallAnim  = new Animation(player.sheet, 4, 15, 15);
   player.anim      = player.walkAnim;
 
   Vector.call(player, 0, 0, 0, player.dy);
