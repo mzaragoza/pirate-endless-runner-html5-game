@@ -405,7 +405,7 @@ var player = (function(player) {
     function mz_jump(){
       player.isJumping = true;
       player.dy = player.jumpDy;
-      jumpCounter = 20;
+      jumpCounter = 10;
       assetLoader.sounds.jump.play();
     }
 
