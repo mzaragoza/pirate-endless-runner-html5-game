@@ -41,7 +41,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.0'
   gem 'selenium-webdriver'
   gem 'watir-webdriver'
-  gem 'web-console', '~> 2.0'
+  gem 'web-console', '~> 2.3'
   gem 'spring'
 end
 
